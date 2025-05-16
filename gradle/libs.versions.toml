@@ -1,0 +1,16 @@
+[versions]
+slf4j = "2.0.16"
+logback = "1.5.9"
+typesafe_config = "1.4.0"
+
+[libraries]
+# logging
+slf4j = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+logback-core = { module = "ch.qos.logback:logback-core", version.ref = "logback" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+
+# config
+typesafe-config = { module = "com.typesafe:config", version.ref = "typesafe_config" }
+
+[bundles]
+logback = ["logback-classic", "logback-core", "slf4j"]

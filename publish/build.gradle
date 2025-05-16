@@ -1,0 +1,18 @@
+plugins {
+    id 'application'
+    id 'com.gradleup.shadow' version '8.3.3'
+}
+
+dependencies {
+    // dependencies used by the application.
+    implementation libs.bundles.logback
+    implementation 'com.google.cloud:google-cloud-pubsub'
+    implementation project(':common')
+}
+
+application {
+    mainClass = 'net.martinprobson.example.Publish'
+}
+
+
+

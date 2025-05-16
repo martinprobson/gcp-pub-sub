@@ -1,0 +1,11 @@
+
+
+dependencies {
+    // dependencies used by the application.
+    implementation libs.bundles.logback
+    implementation 'com.google.cloud:google-cloud-pubsub'
+    implementation libs.typesafe.config
+}
+
+
+

@@ -1,0 +1,28 @@
+allprojects {
+    apply plugin: 'java'
+    dependencies {
+        implementation platform('com.google.cloud:libraries-bom:26.49.0')
+    }
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+// Define a runAll task that runs the publish and subscribe tasks in sequence
+tasks.register('runAll') {
+    dependsOn ':publish:run'
+    dependsOn ':subscribe:run'
+}
+
+runAll {
+    doLast {
+        println 'All tasks are done'
+    }
+}
+
+
