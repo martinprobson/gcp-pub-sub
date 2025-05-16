@@ -12,8 +12,8 @@ In order to access the GCP project a service account is required.
 The location of the service account key file is required to be set in the [reference.conf](common/src/main/resources/reference.conf) file.
 
 ### Create a Pub/Sub topic and subscription
-Note that the topic and subscription must already exist in GCP and are hardcoded in the [Publish](publish/src/main/java/com/rakuten/example/Publish.java) 
-and [Subscribe](subscribe/src/main/java/com/rakuten/example/Subscribe.java) classes.
+Note that the topic and subscription must already exist in GCP and are hardcoded in the [Publish](publish/src/main/java/net/martinprobson/example/Publish.java) 
+and [Subscribe](subscribe/src/main/java/net/martinprobson/example/Subscribe.java) classes.
 ### Run the application
 
 To run the application, execute the following command:
